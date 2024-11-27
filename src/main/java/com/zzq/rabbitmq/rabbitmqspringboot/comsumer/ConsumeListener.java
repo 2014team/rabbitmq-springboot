@@ -13,6 +13,7 @@ import java.io.IOException;
  * @description
  * @date 2022/2/8 21:11
  */
+
 @Component
 public class ConsumeListener {
 
