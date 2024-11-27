@@ -1,0 +1,26 @@
+//package com.zzq.rabbitmq.rabbitmqspringboot.comsumer;
+//
+//import com.rabbitmq.client.Channel;
+//import com.zzq.rabbitmq.rabbitmqspringboot.config.DeadLetterConfig;
+//import org.springframework.amqp.core.Message;
+//import org.springframework.amqp.rabbit.annotation.RabbitListener;
+//import org.springframework.stereotype.Component;
+//
+//import java.io.IOException;
+//
+///**
+// * @author zzq
+// * @description
+// * @date 2022/2/10 15:17
+// */
+//@Component
+//public class DeadListener {
+//
+//    @RabbitListener(queues = DeadLetterConfig.NORMAL_QUEUE)
+//    public void consume(String msg, Channel channel, Message message) throws IOException {
+//        System.out.println("接收到normal队列的消息：" + msg);
+//        //二选一
+//        channel.basicReject(message.getMessageProperties().getDeliveryTag(),false);
+//        channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,false);
+//    }
+//}
